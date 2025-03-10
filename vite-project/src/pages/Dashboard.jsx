@@ -26,7 +26,7 @@ const Dashboard = () => {
         request = { song: data };
       }
       const response = await axios.post(
-        "http://localhost:3000/ai/details",
+        `${import.meta.env.VITE_BACKEND_URL}/ai/details`,
         request
       );
       return response;
